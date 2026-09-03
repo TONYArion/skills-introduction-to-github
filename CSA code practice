@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    Scanner s = new Scanner(System.in);
+    System.out.println("Please enter the following informations below. ");
+    System.out.println("Name: ");
+    String name = s.nextLine();
+
+    System.out.println("Membership type (Basic/Premium/Elite/Nothing): ");
+    String type = s.next();
+
+    System.out.print("Age: ");
+    int age = s.nextInt();
+        
+    System.out.print("Monthly membership fee: ");
+    double mon = s.nextDouble();
+        
+    System.out.print("Body‑fat percentage: ");
+    float bfp = s.nextFloat();
+    s.nextLine();//吃掉残留换行
+    System.out.println(“Do you want a trainer? (Y=yes, y-no) :  ");
+    char t = s.next().charAt(0)
+
+    int fee
+    if('Y' = t){ System.out.println("Your training fee is $40. "); }
+    else{ System.out.println("Your training fee is $0.")}
+
+    if(bfp < 0.2){ System.out.println("You are qualified for a fitness assessment.");}
+    else{ System.out.println("You are not qualified.");}
+
+    if(age >= 18){ System.out.println “You are eligible for adult membership.” ;}else{System.out.println “You are eligible for  junior membership”;}
+ 
