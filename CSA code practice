@@ -1,3 +1,4 @@
+*/ Java programs Worksheet #2 Case 1: smart fitness club
 import java.util.Scanner;
 
 public class Main {
@@ -32,3 +33,4 @@ public class Main {
 
     if(age >= 18){ System.out.println “You are eligible for adult membership.” ;}else{System.out.println “You are eligible for  junior membership”;}
  
+*/ Case 2: 
