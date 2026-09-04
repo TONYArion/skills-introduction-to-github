@@ -1,3 +1,27 @@
+*/ Java programs Worksheet #1 Case 1: Voting Eligibility Checker
+
+Q: Write a program that reads a person's age and outputs whether they are eligible to vote.
+
+import.java.util.scanner;
+
+Scanner s = key Scanner(system.in);
+
+public class Case1 {
+    public static void main(String[] args) {
+
+    int age= s.nextInt();
+
+    System.out.println("Enter your age:"); //enter age
+
+    Boolean eligible = （age >= 18）; 
+
+    If(eligible){
+  System.out.println("You are eligible to vote. ”);
+}else{
+System.out.println(“You are not eligible to vote. ”)
+}
+    
+
 */ Java programs Worksheet #2 Case 1: smart fitness club
 import java.util.Scanner;
 
@@ -33,4 +57,161 @@ public class Main {
 
     if(age >= 18){ System.out.println “You are eligible for adult membership.” ;}else{System.out.println “You are eligible for  junior membership”;}
  
-*/ Case 2: 
+*/ Case 2 : University Scholarship System
+
+Q: A university wants a program that determines a student's scholarship and calculates the remaining tuition and optional hostel cost. 
+
+package UniversityScholarshipSystem;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+
+    //indented all 
+    Scanner s = new Scanner(System.in);
+
+    //declare all variables
+    String name, depart, cate, ;//cate = category
+    int age; 
+    double familyincome, tuifee, remain, finala; //annual family income and tuition fee 
+    float exam;
+    char hostel;
+
+    //User input
+    System.out.println("Welcome to the scholarship system.");
+    
+    System.out.println("Please enter your name: ");//name
+
+    name = s.nextLine();
+
+    System.out.println("Please enter your department(computer, business, engineering, others): ");//depart
+
+    depart = s.next();
+
+    System.out.println("Please enter your age: ");//age
+    age = s.nextInt();
+
+    System.out.println("Please enter your annual family income: ");// familyincome
+    familyincome = s.nextDouble();
+
+    System.out.println("Please enter your tuition fee: ");//tuifee
+    tuifee = s.nextDouble();
+
+    System.out.println("Please enter your examination percentage(90 points = 0.9): "); //exam
+    exam = s.nextFloat();
+
+    //scholarship category
+    System.out.println("Please enter your scholarship category(merit, need, sports): "); //cate
+    String cate = s.nextLine();
+
+    //hostel
+    System.out.println("Hostel required or not (Y=yes, y=no): ");//hostel
+    char hostel = s.next().charAt(0);
+
+    //Classify department
+    String classify;
+    if(depart.equals("computer")){
+
+    classify = "Technology";
+
+    }else if(dep.equals("business")){
+
+    classify = "Management";
+
+    }else if(dep.equals("engineering")){
+
+    classify = "Technical";
+
+    }else{
+
+    classify = "Other";
+
+    }
+
+    //determine scholarship percentage
+
+    if( exam >= 0.9){ amount = 0.5 * fee; }
+    else if( exam < 0.9 && exam >= 0.8){  amount = 0.3 * fee; }
+    else if( exam < 0.8 && exam >= 0.7){ amount = 0.2 * fee ;}
+    else{ amount = fee; }
+
+    //Family income rules
+
+    if (familyincome <= 40000){
+    System.out.println("Additional financial assistance available.");
+
+    }else{
+    System.out.println("Standard financial assistance rules apply.");
+    }
+
+
+    //hostel cost
+    if('Y' == hostel){
+    hostel = 1500;
+    }else{ hostel = 0; }
+
+    //category
+    String type;
+    if( scholar.equals("merit")){
+    type= "merit";
+    }else if(scholar.equals("need")){
+    type= "need";
+    }else{ type= "sports";}
+
+    //calculation
+    remain = fee - amount;
+    finala = remain + hostel;
+
+    //final infos
+    System.out.println("\n============Scholarship Report ============");
+    System.out.println("Name: " + name);//name
+    System.out.println("Department: " + depart);//name
+    System.out.println("Age: " + age);
+    System.out.println("Annual Family Income: " + familyincome);//annualincome 
+    System.out.println("Fee: " + tuifee);//tuifee
+    System.out.println("exam: " + exam);//exam
+    System.out.println("Type of scholarship: " + cata);
+    System.out.println("Remaining tuition : " + remain);
+    System.out.println("Final amount: " + finala);
+    System.out.println("\n===============================================");
+    }
+}
+
+*/ Case 3 : International Travel Booking System
+
+    String name, des, level, place, type; 
+    int num;
+    double price, gdiscount, finalcost, total, mdiscount, transfee, insur; 
+    flaot insur//insurance date
+    char trans
+
+    System.out.println("Enter your name: ");
+    name = nextLing();
+
+
+    if(des.equals.("Paris")){
+    place = "Paris"
+    }else if(des.equals("Tokyo")){
+    place = "Tokyo"
+    }else{
+    place = "Other place"
+    }
+
+    //membership level
+    if(level.equals("Gold"){
+    mdiscount = 0.1 * total;
+    }else if(level.equals("Silver")){
+    mdiscount = 0.05 * total
+    }else{
+    mdiscount = 0;}
+
+    if(num >= 5){
+    gdiscount = 0.15 * total
+    }else if(num > 3){
+    gdiscount = 0.10 * total;
+    }else if(num = 2){
+    gdiscount = 0.05 * total
+    }else{
+    gdiscount = 0
+    }
