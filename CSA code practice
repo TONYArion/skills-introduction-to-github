@@ -180,16 +180,41 @@ public class Main {
 
 */ Case 3 : International Travel Booking System
 
-    String name, des, level, place, type; 
+package Booking;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+
+    //indented all 
+    Scanner s = new Scanner(System.in);
+
+    String name, des, level, place, type, support; 
     int num;
-    double price, gdiscount, finalcost, total, mdiscount, transfee, insur; 
-    flaot insur//insurance date
-    char trans
+    double ppp, gdiscount, finalcost, total, mdiscount, transfee, insur; // insur = insurace fee
+    float insurate//insurance date
+    char trans//transfer required 
 
     System.out.println("Enter your name: ");
-    name = nextLing();
+    name = s.nextLine();
 
+    System.out.println("Destinations (Paris, Dubai , Tokyo, Other) :  ");
+    des = s.nextLine();
 
+    System.out.println("Number of travelers: ");
+    num = s.nextInt();
+
+    System.out.println("Package price per person: ");
+    ppp = s.nextDouble();
+
+    System.out.println("Travel insurance rate: ");
+    insurate = s.nextFloat();
+
+    System.out.println("Airport transfer required(Y=yes, y=no): ");
+    trans = s.next().charAt(0);
+
+    //Conditions
     if(des.equals.("Paris")){
     place = "Paris"
     }else if(des.equals("Tokyo")){
@@ -206,12 +231,29 @@ public class Main {
     }else{
     mdiscount = 0;}
 
+    support;
     if(num >= 5){
     gdiscount = 0.15 * total
+    support.equals.("Group booking : Priority support activated")//For statement, we should use this equal, not ==/=.
     }else if(num > 3){
     gdiscount = 0.10 * total;
+    support.equals.("Standard booking support. ")
     }else if(num = 2){
     gdiscount = 0.05 * total
+    support.equals.("Standard booking support. ")
     }else{
+    support.equals.("Standard booking support. ")
     gdiscount = 0
     }
+
+    if(trans = 'Y'){
+    transfee = 120;
+    }else{
+    transfee = 0;
+    }
+
+    //summary
+    finalcost = total - gdiscount - mdiscount + insur + transfee
+
+    System.out.println(n\===========Booking summary===========);
+    //print the informations
