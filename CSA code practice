@@ -20,7 +20,164 @@ public class Case1 {
 }else{
 System.out.println(“You are not eligible to vote. ”)
 }
+
+*/ Java programs Worksheet #1 Case 2: Temperature Converter
+Develop a program that converts temperature from Celsius to Fahrenheit.
+
+import java.util.Scanner;
+
+public class Case2{
+    public static void main(String[] args) {
+
+    double c, f; //List all variables
+
+    Scanner s = new Scanner(System.in) ;  
     
+    System.out.println("Enter temperature in Celsius: ");
+
+    c = s.nextDouble();
+
+    f = 1.8 * c + 32 ;
+   
+    System.out.println("Temperature in Fahrenheit: " +f );
+ 
+    s.close();
+    }
+}
+
+*/ Java programs Worksheet #1 Case 3: Employee Bonus Calculator
+Write a program to calculate an employee’s bonus. If the employee has worked more than 5 years, they get 10% of their salary as a bonus.
+import java.util.Scanner;
+
+public class Case3 {
+    public static void main(String[] args) {
+    //声明所有变量
+    Scanner salary = new Scanner(System.in);
+
+    double service, sal, bonus;
+    //输入所有变量
+    System.out.println("Enter years of service: ");
+
+    service = salary.nextDouble();
+
+    System.out.println("Enter earning: ");
+
+    sal = salary.nextDouble();
+
+    bonus = sal * 0.1; 
+
+    if (service >= 5){
+    System.out.println("Bonus: "+ bonus );
+    }
+    salary.close();
+
+    }
+}
+
+
+
+*/ Java programs Worksheet #1 Case Study 4: Theme Park Ticketing System
+Write a Java Program using the following scenario:
+Scenario A theme park wants a Java program to calculate ticket prices based on a visitor’s age and whether they want a fast pass.
+Children under 5 → Free
+Ages 5–12 → $10
+Ages 13–64 → $20
+Ages 65+ → $12
+If the visitor chooses fast pass (yes), add $5 to their ticket price.
+
+Expected output: 
+Enter age: 
+Do you want a fast pass (yes/no) ? :
+Your total ticket price is : 
+
+=========需要修改
+
+import java.util. Scanner;
+
+public class Case4{
+    public static void main(String[] args) {
+    
+    Scanner s = new Scanner(System.in);
+
+    System.out.print("Enter age: ");
+
+    String age = s.nextLine();
+
+    if( age < 5){
+    System.out.println("Your total ticket price is: free");
+    }
+
+    if( age <=12 && age >= 5 ){
+    System.out.println("Your total ticket price is: " +$10);
+    }
+
+    if( age <= 64 && age >12 ){
+    System.out.println("Your total ticket price is: " +$20);
+    }
+
+     if( age > 64 ){
+    System.out.println("Your total ticket price is: " +$12);
+    }
+	
+    
+    System.out.println("Do you want a fast pass(yes/no)? “);
+
+    bollean yes = true;
+    bollean no = false;
+
+    boolean price = s.nextBoolean();
+
+    if(true){
+        System.out.println("Your total ticket price is:" ++5);
+    }else{System.out.println("Your total ticket price is: “);
+	}
+    
+    }
+}
+
+
+*/ Java programs Worksheet #1 Case Study 5: University Admissions Helper
+
+Write a Java Program using the following scenario:
+Scenario A university wants an admissions helper program:
+If GPA ≥ 3.8 and SAT ≥ 1400 → "Admission very likely"
+Else if GPA ≥ 3.5 and SAT ≥ 1200 → "Strong candidate"
+Else if GPA ≥ 3.0 and SAT ≥ 1000 → "Considered, but competitive"
+Else → "Work harder and try again (growth mindset!)"
+
+Expected Output:
+Enter GPA:
+Enter SAT score: 
+Strong candidate
+
+import java.util. Scanner;
+
+public class Case5{
+    public static void main(String[] args) {
+    
+    Scanner s = new Scanner(System.in);
+
+    System.out.println("Enter GPA: ");
+    
+    float gpa = s.nextFloat();
+
+    System.out.println("Enter SAT score: ");
+    
+    int sat = s.nextInt();
+
+    if(gpa >= 3.8 && sat >= 1400 ){
+        System.out.print("Admission very likely");
+    }else if(gpa >=3.5 && sat >=1200){
+        System.out.print("Strong candidate");
+    }else if( gpa >= 3.0 && sat >= 1000){
+        System.out.print("Considered, but competitive");
+    }else{
+        System.out.print("Work harder and try again (growth mindset!)");
+    }
+    }
+}
+
+=====================================================================================================
 
 */ Java programs Worksheet #2 Case 1: smart fitness club
 import java.util.Scanner;
