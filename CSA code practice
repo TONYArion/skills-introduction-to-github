@@ -425,3 +425,97 @@ public class Main {
 
     System.out.println(n\===========Booking summary===========);
     //print the informations
+
+====================================================================================================================================
+
+*/ Homework #2 Java Program 1:
+Write a Java Program to accept a number from the user. Using if……else if…… statements in Java create 3 operations (cases) namely to find the cube of a number, to find the square of a number, and to print the number. Ask the user which operation should be performed and display the result.
+
+
+
+
+
+Java Program 2:
+A supermarket awards coupons depending on how much a customer spends on groceries. For example, if you spend $50, you will get a coupon worth eight percent of that amount. The following table shows the percent used to calculate the coupon awarded for different amounts spent. Write a Java program that calculates and prints the value of the coupon a person can receive based on groceries purchased. 
+
+===============================
+Money    === Coupon percentage
+< 10     === No coupon
+10-60    === 8%
+60-150   === 10% 
+150-210  === 12%
+> 210    === 14%
+===============================
+package homeworkweekend;
+
+import java.util.Scanner;
+
+public class Main {
+  
+  public static void main (String[] args) {
+  
+    Scanner s = new Scanner(System.in);
+  
+    double cost, coupon;
+  
+    String couponpercent;
+
+    System.out.println("Please enter the cost of your groceries: ");
+    cost= s.nextDouble();
+    coupon = 0.0;
+    couponpercent = " ";
+  
+    if( cost < 10 ) {
+    
+      couponpercent = "0";
+  
+      coupon = 0;
+  
+    }else if( cost >= 10 && cost <= 60 ) {
+    
+      couponpercent = "8%";
+  
+      coupon = cost * 0.08; 
+  
+    }else if( cost > 60 && cost <= 150) {
+    
+      couponpercent = "10%";
+  
+      coupon = cost * 0.10;
+  
+    }else if( cost > 150 && cost <= 210) {
+    
+      couponpercent = "12%";
+  
+      coupon = cost * 0.12;
+  
+    }else if( cost > 210) {
+    
+      couponpercent = "14%";
+  
+      coupon = cost * 0.14;
+    }
+    
+    System.out.println(" You win a discount coupon of $ " + coupon);
+    
+    if( couponpercent != "0" ) {
+      
+    System.out.print( "("+ couponpercent + " of your purchase)");
+    
+    }else {
+    
+    System.out.println("You don't win a discount coupon.");
+      
+    }
+    
+
+    }
+
+}
+
+
+
+
+
+
+
